@@ -6,13 +6,13 @@ const arrayNumbers = [6,4,8,5,1,3,7]
 const target = 7;
 
 // brute approach
-const hasPairWithSum = (numbers = [], target) =>{
+const hasPairWithSum = (numbers, target) =>{
 
-    for(let i = 0; i < numbers.length; i++){
+    for(const element of numbers){
         for(let j = 1; j < numbers.length -1; j++){
             
-            if(numbers[i] + numbers[j] == target ){
-                console.log('puto toto mkon ya lo encontre')
+            if(element + numbers[j] == target ){
+                console.log('Ya lo encontre')
                 return true;
             }
         }
@@ -27,7 +27,7 @@ console.log(hasPairWithSum(arrayNumbers, target));
 
 
 // approach with map
-const hasPairWithSum2 = (numbers = [], target) =>{
+const hasPairWithSum2 = (numbers, target) =>{
 
     const myMap = new Map();
 
@@ -52,7 +52,7 @@ console.log(hasPairWithSum2(arrayNumbers, target));
 
 
 // Andrei Approach
-const hasPairWithSum3 = (numbers = [], target) =>{
+const hasPairWithSum3 = (numbers, target) =>{
 
     const mySet = new Set();
 
